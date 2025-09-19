@@ -1,0 +1,448 @@
+/* ---- Variáveis de Cor e Configurações Globais ---- */
+:root {
+    --cor-primaria: #0d0d2b;
+    --cor-secundaria: #8a2be2;
+    --cor-destaque: #00c6ff;
+    --cor-texto: #f0f0f0;
+    --cor-texto-escuro: #333;
+    --nav-height: 70px; /* Variável para a altura da navbar */
+}
+
+/* MELHORIA: Scroll Suave */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height); /* Evita que o conteúdo fique atrás da navbar fixa */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+h2 {
+    /* MELHORIA: Tipografia Fluida */
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 1rem;
+    color: var(--cor-destaque);
+}
+
+/* ---- NOVO: Estilos da Barra de Navegação ---- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;/* ---- Variáveis de Cor e Configurações Globais ---- */
+    :root {
+        --cor-primaria: #0d0d2b; /* Azul bem escuro, quase preto */
+        --cor-secundaria: #8a2be2; /* Roxo vibrante */
+        --cor-destaque: #00c6ff; /* Azul ciano brilhante */
+        --cor-texto: #f0f0f0;    /* Branco suave */
+        --cor-texto-escuro: #333; /* Cinza escuro para fundos claros */
+    }
+    
+    /* Reset básico e fonte padrão */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--cor-primaria);
+        color: var(--cor-texto);
+        line-height: 1.6;
+    }
+    
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--cor-destaque);
+    }
+    
+    /* ---- Estilos da Seção Hero ---- */
+    .hero {
+        height: 100vh; /* Ocupa a tela inteira */
+        background-image: 
+            linear-gradient(rgba(13, 13, 43, 0.8), rgba(13, 13, 43, 0.9)), /* Overlay escuro para legibilidade */
+            url('background.jpg'); /* SUA IMAGEM AQUI */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* Efeito Parallax */
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: linear-gradient(90deg, var(--cor-destaque), var(--cor-secundaria));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent; /* A "mágica" do texto em gradiente */
+    }
+    
+    .hero-content .subtitle {
+        font-size: 1.5rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+    }
+    
+    .cta-button {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--cor-primaria);
+        background-color: var(--cor-destaque);
+        border-radius: 50px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .cta-button:hover {
+        transform: translateY(-5px); /* Efeito de flutuar */
+        box-shadow: 0 10px 20px rgba(0, 198, 255, 0.3);
+    }
+    
+    /* ---- Estilos dos Cards ---- */
+    #recursos {
+        background-color: rgba(255, 255, 255, 0.05); /* Fundo sutilmente mais claro */
+    }
+    
+    .cards-container {
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+        margin-top: 3rem;
+        flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+    }
+    
+    .card {
+        background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+        padding: 2rem;
+        border-radius: 15px;
+        flex-basis: 300px; /* Largura base de cada card */
+        text-align: left;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: scale(1.05);
+        border-color: var(--cor-destaque);
+    }
+    
+    .card h3 {
+        color: var(--cor-destaque);
+        margin-bottom: 1rem;
+    }
+    
+    /* ---- Estilos do Rodapé ---- */
+    .footer {
+        text-align: center;
+        padding: 2rem;
+        background-color: var(--cor-primaria);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* ---- Media Queries para Responsividade ---- */
+    @media (max-width: 768px) {
+        .hero-content h1 {
+            font-size: 2.8rem;
+        }
+    
+        .hero-content .subtitle {
+            font-size: 1.2rem;
+        }
+    
+        h2 {
+            font-size: 2rem;
+        }
+    
+        .cards-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .card {
+            flex-basis: 100%;
+            max-width: 400px;
+        }
+    }
+    width: 100%;
+    height: var(--nav-height);
+    z-index: 1000;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(13, 13, 43, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-menu a::after { /* Efeito de sublinhado animado */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-destaque);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+
+/* ---- Estilos da Seção Hero ---- */
+.hero {
+    height: 100vh;
+    /* MELHORIA: Fundo animado sutil */
+    background: linear-gradient(125deg, var(--cor-primaria), #2c1a4d, var(--cor-secundaria), var(--cor-destaque));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+/* Animação do gradiente de fundo */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.hero-content h1 {
+    /* MELHORIA: Tipografia Fluida */
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white; /* Gradiente de texto removido para melhor contraste com o fundo animado */
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content .subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    background-color: var(--cor-destaque);
+    border-radius: 50px;
+    border: 2px solid var(--cor-destaque);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 198, 255, 0.3);
+    background-color: transparent;
+    color: var(--cor-destaque);
+}
+
+/* ---- NOVO: Animações de Entrada ---- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-scroll {
+    /* Aplica a animação, mas a deixa "pausada" por padrão */
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-play-state: paused;
+}
+
+/* Este seletor é um futuro padrão do CSS para disparar animações ao rolar.
+   Para navegadores que já o suportam, funciona sem JS! */
+@supports (animation-timeline: view()) {
+    .animate-on-scroll {
+        animation-timeline: view();
+        animation-range: entry 25% cover 50%; /* Define quando a animação começa e termina */
+    }
+}
+
+/* Para compatibilidade máxima, o ideal é usar JS com Intersection Observer.
+   Mas para um efeito simples, a animação vai rodar no carregamento da página,
+   e os delays nos cards vão criar um efeito cascata. */
+.animate-on-scroll {
+    animation-play-state: running; /* Garante que a animação rode mesmo sem suporte ao @supports */
+}
+
+
+/* ---- Estilos dos Cards ---- */
+#recursos {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    padding: 2rem;
+    border-radius: 15px;
+    flex-basis: 300px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Aumenta o efeito de flutuação */
+    border-color: var(--cor-destaque);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: var(--cor-destaque);
+    margin-bottom: 1rem;
+}
+
+/* ---- NOVO: Seção de Exemplo Prático ---- */
+.exemplo-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.exemplo-box {
+    flex: 1;
+    text-align: center;
+}
+
+.exemplo-box h3 {
+    margin-bottom: 1rem;
+}
+
+.exemplo-box pre {
+    background-color: #1a1a3a;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.fancy-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, var(--cor-destaque), var(--cor-secundaria));
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fancy-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.5);
+}
+
+/* ---- Estilos do Rodapé ---- */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--cor-primaria);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ---- Media Queries para Responsividade ---- */
+@media (max-width: 768px) {
+    .nav-menu { display: none; } /* Esconde o menu em telas pequenas (pode ser substituído por um menu hamburguer com JS) */
+    .exemplo-container { flex-direction: column; }
+    .card {
+        flex-basis: 100%;
+        max-width: 400px;
+    }
+}
