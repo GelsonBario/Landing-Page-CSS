@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Magia do CSS - Landing Page</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">CSS Magic</a>
+            <ul class="nav-menu">
+                <li><a href="#sobre">O Que É</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#exemplo">Exemplo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Descubra a Magia do CSS</h1>
+            <p class="subtitle">Transforme estruturas HTML em experiências visuais incríveis e interativas.</p>
+            <a href="#recursos" class="cta-button">Comece a Explorar</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="container animate-on-scroll">
+            <h2>O que são Folhas de Estilo em Cascata?</h2>
+            <p>CSS (Cascading Style Sheets) é a linguagem que usamos para estilizar um documento HTML. O CSS descreve como os elementos HTML devem ser exibidos na tela, no papel ou em outras mídias. Com ele, você controla cores, fontes, espaçamentos, layout e muito mais!</p>
+        </section>
+
+        <section id="recursos" class="container animate-on-scroll">
+            <h2>Recursos Poderosos</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>🎨 Cores e Gradientes</h3>
+                    <p>Dê vida ao seu site com uma paleta de cores ilimitada e gradientes impressionantes que capturam a atenção do usuário.</p>
+                </div>
+                <div class="card" style="animation-delay: 200ms;">
+                    <h3>📦 Flexbox & Grid</h3>
+                    <p>Crie layouts complexos e responsivos de forma intuitiva e poderosa. Diga adeus aos hacks de posicionamento.</p>
+                </div>
+                <div class="card" style="animation-delay: 400ms;">
+                    <h3>✨ Animações e Transições</h3>
+                    <p>Adicione movimento e interatividade à sua página com transições suaves e animações keyframe complexas.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="exemplo" class="container animate-on-scroll">
+            <h2>Veja a Mágica Acontecer</h2>
+            <p>À esquerda, HTML puro. À direita, o mesmo HTML transformado com CSS.</p>
+            <div class="exemplo-container">
+                <div class="exemplo-box antes">
+                    <h3>Antes (HTML Puro)</h3>
+                    <pre><code>&lt;button&gt;Clique Aqui&lt;/button&gt;</code></pre>
+                    <button>Clique Aqui</button>
+                </div>
+                <div class="exemplo-box depois">
+                    <h3>Depois (Com CSS)</h3>
+                    <pre><code>&lt;button class="fancy-btn"&gt;Clique Aqui&lt;/button&gt;</code></pre>
+                    <button class="fancy-btn">Clique Aqui</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Criado com ❤️ e CSS.</p>
+    </footer>
+    
+    <script>
+        const nav = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
