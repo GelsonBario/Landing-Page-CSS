@@ -6,7 +6,6 @@
 Uma landing page moderna e responsiva sobre o poder do CSS, criada para demonstrar diversas técnicas de estilização, layout e animação.
 
 ![Demonstração do Projeto](./assets/screenshot1.png)
-*(Dica: Tire um print da sua página finalizada, salve como `screenshot.png` na pasta do projeto e esta imagem aparecerá aqui!)*
 
 ---
 
